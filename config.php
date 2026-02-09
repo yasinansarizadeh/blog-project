@@ -26,3 +26,25 @@ function getAllArticles() {
 
     return $articles;
 }
+function getArticleById($id) {
+    $file = ARTICLES_DIR . $id . '.txt';
+
+    if (!file_exists($file)) {
+        return null;
+    }
+
+    $content = file_get_contents($file);
+    $lines = explode("\n", $content, 4);
+
+    if (count($lines) < 4) {
+        return null;
+    }
+
+    return [
+        'id' => $id,
+        'title' => $lines[0],
+        'author' => $lines[1],
+        'date' => $lines[2],
+        'content' => $lines[3]
+    ];
+}

@@ -24,3 +24,55 @@ body {
     min-height: 100vh;
     padding-bottom: 50px;
 }
+
+.article-content p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline !important;
+}
+
+hr.bg-white {
+    opacity: 0.2;
+}
+
+.border-white-25 {
+    border-color: rgba(255, 255, 255, 0.25) !important;
+}
+.glass-input {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    border-radius: 10px !important;
+    padding: 12px 15px !important;
+    backdrop-filter: blur(5px);
+}
+
+.glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.glass-input:focus {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25) !important;
+    color: white !important;
+}
+
+.alert.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 200px;
+}

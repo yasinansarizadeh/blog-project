@@ -39,11 +39,11 @@ $articles = getAllArticles();
                                     Read More
                                 </a>
                                 <div class="float-end">
-                                    <a href="edit.php?id=<?php echo $article['id']; ?>" class="btn btn-outline-light btn-sm me-1">
-                                        Edit
+                                    <a href="edit.php?id=<?php echo $article['id']; ?>" class="btn btn-outline-light btn-sm me-1" title="Edit">
+                                        <i class="bi bi-pencil"></i>
                                     </a>
-                                    <a href="delete.php?id=<?php echo $article['id']; ?>" class="btn btn-outline-light btn-sm" onclick="return confirm('Delete this article?')">
-                                        Delete
+                                    <a href="delete.php?id=<?php echo $article['id']; ?>" class="btn btn-outline-light btn-sm" title="Delete" onclick="return confirm('Delete this article?')">
+                                        <i class="bi bi-trash"></i>
                                     </a>
                                 </div>
                             </div>

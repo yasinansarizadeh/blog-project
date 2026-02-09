@@ -6,6 +6,7 @@
     <title><?php echo SITE_TITLE; ?></title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/glassmorphism.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light glass-navbar fixed-top">

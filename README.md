@@ -23,7 +23,15 @@ A minimal glassmorphism style blog without database, using flat-file storage.
 - ✅ Article cards with excerpt, date, author
 - ✅ Sort articles by date (newest first)
 - ✅ Empty state handling
-- ✅ Navigation between pages
+- ✅ Single article view page
+- ✅ Breadcrumb navigation
+- ✅ Article content formatting
+- ✅ Author information display
+- ✅ Create article form with validation
+- ✅ Glass-style form inputs
+- ✅ Success/error messages
+- ✅ Bootstrap Icons integration
+- ✅ File-based storage system
 
 ## Data Storage Format
 
