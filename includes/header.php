@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/glassmorphism.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    <meta name="description" content="A glassmorphism style blog built with PHP and Bootstrap">
+    <meta name="keywords" content="blog, glassmorphism, php, bootstrap, no database">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light glass-navbar fixed-top">

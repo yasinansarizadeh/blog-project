@@ -76,3 +76,227 @@ textarea.form-control {
     resize: vertical;
     min-height: 200px;
 }
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes glassShine {
+    0% { background-position: -100px 0; }
+    100% { background-position: 200px 0; }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.pulse-hover:hover {
+    animation: pulse 0.5s ease-in-out;
+}
+
+.slide-in {
+    animation: slideIn 0.4s ease-out;
+}
+
+.glass-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-shine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent);
+    animation: glassShine 2s infinite;
+    pointer-events: none;
+}
+
+/* Hover Effects */
+.glass-card {
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    transition: all 0.3s ease !important;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Delete Page Styles */
+.article-preview {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #ffc107;
+}
+
+.btn-danger {
+    background: linear-gradient(45deg, #dc3545, #c82333) !important;
+    border: none !important;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(45deg, #c82333, #bd2130) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Page Load Animation */
+body {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Staggered Animation for Cards */
+.article-card-inner {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.col-md-6.col-lg-4:nth-child(2) .article-card-inner {
+    animation-delay: 0.1s;
+}
+
+.col-md-6.col-lg-4:nth-child(3) .article-card-inner {
+    animation-delay: 0.2s;
+}
+
+.glass-input:focus {
+    animation: pulse 0.5s ease-in-out;
+}
+.spinner-border {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.animate-cards {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@media (max-width: 768px) {
+    .glass-card {
+        margin: 10px;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+@media print {
+    .glass-navbar,
+    .btn,
+    form {
+        display: none !important;
+    }
+
+    .glass-card {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+}
+
+.btn-outline-danger {
+    border-color: rgba(220, 53, 69, 0.5) !important;
+    color: #dc3545 !important;
+}
+
+.btn-outline-danger:hover {
+    background-color: rgba(220, 53, 69, 0.2) !important;
+    border-color: #dc3545 !important;
+}
+
+.article-info {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* View Article Specific Styles */
+.author-avatar {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content-text p {
+    text-align: justify;
+    text-justify: inter-word;
+    transition: all 0.3s ease;
+}
+
+.content-text p.highlight {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 15px;
+    border-radius: 10px;
+    border-left: 4px solid rgba(255, 255, 255, 0.5);
+    margin-left: -15px;
+    padding-left: 20px;
+}
+
+.article-meta {
+    transition: all 0.3s ease;
+}
+
+.article-meta:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Print Styles Enhancement */
+@media print {
+    @page {
+        margin: 1cm;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.6;
+    }
+
+    .article-header h1 {
+        font-size: 18pt;
+        margin-bottom: 15pt;
+    }
+
+    .content-text p {
+        margin-bottom: 12pt;
+        text-align: left;
+    }
+
+    .author-card {
+        page-break-inside: avoid;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        color: #666;
+    }
+}

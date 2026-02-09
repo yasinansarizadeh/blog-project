@@ -48,3 +48,57 @@ function getArticleById($id) {
         'content' => $lines[3]
     ];
 }
+function updateArticle($id, $title, $author, $content) {
+    $file = ARTICLES_DIR . $id . '.txt';
+
+    if (!file_exists($file)) {
+        return false;
+    }
+
+    $existingContent = file_get_contents($file);
+    $lines = explode("\n", $existingContent, 4);
+
+    if (count($lines) < 4) {
+        return false;
+    }
+
+    $date = $lines[2];
+    $articleData = $title . "\n" . $author . "\n" . $date . "\n" . $content;
+
+    return file_put_contents($file, $articleData) !== false;
+}
+function getPrevArticle($currentId) {
+    $articles = getAllArticles();
+    $currentIndex = -1;
+
+    foreach ($articles as $index => $article) {
+        if ($article['id'] == $currentId) {
+            $currentIndex = $index;
+            break;
+        }
+    }
+
+    if ($currentIndex !== -1 && isset($articles[$currentIndex + 1])) {
+        return $articles[$currentIndex + 1];
+    }
+
+    return null;
+}
+
+function getNextArticle($currentId) {
+    $articles = getAllArticles();
+    $currentIndex = -1;
+
+    foreach ($articles as $index => $article) {
+        if ($article['id'] == $currentId) {
+            $currentIndex = $index;
+            break;
+        }
+    }
+
+    if ($currentIndex > 0 && isset($articles[$currentIndex - 1])) {
+        return $articles[$currentIndex - 1];
+    }
+
+    return null;
+}
