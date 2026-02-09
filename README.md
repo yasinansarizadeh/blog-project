@@ -8,28 +8,23 @@ A minimal glassmorphism style blog without database, using flat-file storage.
 - `css/` – Bootstrap and custom glassmorphism styles
 - `js/` – Bootstrap JS and custom animations
 - `includes/` – reusable PHP components (header, footer)
-- `index.php` – homepage listing articles
+- `index.php` – homepage listing all articles
+- `view.php` – view single article page
 - `create.php` – create new article page
-- `config.php` – configuration constants
+- `edit.php` – edit article page
+- `delete.php` – delete article page
+- `config.php` – configuration and helper functions
 
-## Features
+## Features Implemented
 
-- List articles
-- View article details
-- Create, edit, delete articles
-- Glassmorphism UI with animations
-- No database, file-based storage
+- ✅ Glassmorphism UI design
+- ✅ Responsive layout with Bootstrap 5
+- ✅ Dynamic articles listing from text files
+- ✅ Article cards with excerpt, date, author
+- ✅ Sort articles by date (newest first)
+- ✅ Empty state handling
+- ✅ Navigation between pages
 
-## How to Run
+## Data Storage Format
 
-Place the project in your PHP server root (like XAMPP/htdocs) and open in browser.
-
-## UI Design
-
-- Glassmorphism effect with backdrop-filter
-- Gradient background
-- Responsive Bootstrap 5 layout
-- Fixed glass navbar
-
----
-*Next: Articles List Page (Homepage)*
+Each article is stored as `[timestamp].txt` in `articles/` folder with format:
