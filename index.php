@@ -9,7 +9,15 @@ $articles = getAllArticles();
             <div class="glass-card p-5 text-center text-white mb-4 slide-in">
                 <h1 class="display-5 fw-bold">GlassBlog</h1>
                 <p class="lead">A modern glassmorphism blog with pure PHP</p>
-                <p class="badge bg-light text-dark mb-3"><?php echo getArticleCount(); ?> Articles</p>
+                <p class="badge bg-light text-dark mb-3">
+                    <?php
+                    if (function_exists('getArticleCount')) {
+                        echo getArticleCount() . ' Articles';
+                    } else {
+                        echo 'Articles';
+                    }
+                    ?>
+                </p>
                 <a href="create.php" class="btn btn-light px-4 pulse-hover">
                     <i class="bi bi-plus-circle"></i> Create New Article
                 </a>

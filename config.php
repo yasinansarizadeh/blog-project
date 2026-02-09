@@ -26,6 +26,7 @@ function getAllArticles() {
 
     return $articles;
 }
+
 function getArticleById($id) {
     $file = ARTICLES_DIR . $id . '.txt';
 
@@ -48,6 +49,7 @@ function getArticleById($id) {
         'content' => $lines[3]
     ];
 }
+
 function updateArticle($id, $title, $author, $content) {
     $file = ARTICLES_DIR . $id . '.txt';
 
@@ -67,6 +69,12 @@ function updateArticle($id, $title, $author, $content) {
 
     return file_put_contents($file, $articleData) !== false;
 }
+
+function getArticleCount() {
+    $files = glob(ARTICLES_DIR . '*.txt');
+    return count($files);
+}
+
 function getPrevArticle($currentId) {
     $articles = getAllArticles();
     $currentIndex = -1;
