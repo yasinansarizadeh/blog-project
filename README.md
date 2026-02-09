@@ -9,6 +9,8 @@ A minimal glassmorphism style blog without database, using flat-file storage.
 - `js/` – Bootstrap JS and custom animations
 - `includes/` – reusable PHP components (header, footer)
 - `index.php` – homepage listing articles
+- `create.php` – create new article page
+- `config.php` – configuration constants
 
 ## Features
 
@@ -22,5 +24,12 @@ A minimal glassmorphism style blog without database, using flat-file storage.
 
 Place the project in your PHP server root (like XAMPP/htdocs) and open in browser.
 
+## UI Design
+
+- Glassmorphism effect with backdrop-filter
+- Gradient background
+- Responsive Bootstrap 5 layout
+- Fixed glass navbar
+
 ---
-*Next: Glassmorphism UI & Base Layout*
+*Next: Articles List Page (Homepage)*
